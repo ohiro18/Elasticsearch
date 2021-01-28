@@ -1,0 +1,31 @@
+{
+  "name": "es-graph-recs",
+  "version": "0.0.0",
+  "homepage": "https://github.com/o19s/elastic-graph-recommender",
+  "authors": [
+    "Doug Turnbull <softwaredoug@gmail.com>"
+  ],
+  "description": "demo of recommendations with elastic graph",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.7",
+    "elasticsearch": "~11.0.1",
+    "bootstrap": "~3.3.6",
+    "angular-bootstrap": "~2.1.3",
+    "jquery": "~3.1.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.5.7"
+  },
+  "resolutions": {
+    "jquery": "1.9.1 - 2",
+    "angular": ">=1.4.0"
+  }
+}
