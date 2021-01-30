@@ -1,25 +1,12 @@
 angular.module('recsApp')
   .factory('graphUtils', graphUtils);
 
-// Utilities for making the Elastic graph response
-// easier to deal with
 function graphUtils() {
   return {
     parse: parse
   };
 
   function parse(vertices, connections) {
-    // turn the graph into a tree rooted at depth 0
-    //
-    //   FOO <---> BAR
-    //   /\      =/
-    //    |     /
-    //   \/  |=
-    //   BAZ
-    //
-    //   If FOO is at depth 0, then make this
-    //   graph a tree with foo at its root
-
 
     function getOutbound(listIdx) {
       var outbounds = [];
