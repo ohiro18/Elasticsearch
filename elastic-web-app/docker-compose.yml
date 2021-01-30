@@ -6,7 +6,7 @@
     links:
      - elasticsearch
     ports:
-     - "80:80"
+     - "8000:8000"
 
 
   elasticsearch:
@@ -15,7 +15,8 @@
     ports:
      - "9200:9200"
      - "9300:9300"
-
+     - "9100:9100"
+     
   init:
     build: .
     dockerfile: ./deploy/init/Dockerfile
