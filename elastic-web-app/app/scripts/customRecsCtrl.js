@@ -3,7 +3,7 @@ angular.module('recsApp')
     // Allow searches on title
     var customRecs = this;
 
-    var storedLikes = localStorage.movieLibrary ? JSON.parse(localStorage.movieLibrary) : null;
+    var storedLikes = localStorage.ItemLibrary ? JSON.parse(localStorage.ItemLibrary) : null;
     customRecs.recs = {likes:
                        storedLikes || [],
                        config: {
@@ -11,22 +11,22 @@ angular.module('recsApp')
                          useGenre: false,
                          useOverviews: false,
                          numSimilarUsers: 1000,
-                         minMovies: 50, // %
+                         minItems: 50, 
                          globalGuidance: false
 
                        }};
     customRecs.mode = 'define';
 
-    customRecs.addMovie = function (movie) {
-      customRecs.recs.likes.push(movie);
-      localStorage.movieLibrary = JSON.stringify(customRecs.recs.likes);
+    customRecs.addItem = function (Item) {
+      customRecs.recs.likes.push(Item);
+      localStorage.ItemLibrary = JSON.stringify(customRecs.recs.likes);
     };
 
-    customRecs.removeMovie = function (movie) {
-      var movieIndex = customRecs.recs.likes.indexOf(movie);
-      if (movieIndex >= 0) {
-        customRecs.recs.likes.splice(movieIndex, 1);
-        localStorage.movieLibrary = JSON.stringify(customRecs.recs.likes);
+    customRecs.removeItem = function (Item) {
+      var ItemIndex = customRecs.recs.likes.indexOf(Item);
+      if (ItemIndex >= 0) {
+        customRecs.recs.likes.splice(ItemIndex, 1);
+        localStorage.ItemLibrary = JSON.stringify(customRecs.recs.likes);
       }
     };
 
