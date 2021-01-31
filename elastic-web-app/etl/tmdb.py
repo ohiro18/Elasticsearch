@@ -5,15 +5,7 @@ import time
 from requests.exceptions import ConnectionError
 import urllib3
 
-# you'll need to have an API key for TMDB
-# to run these examples,
-# run export TMDB_API_KEY=<YourAPIKey>
 tmdb_api_key = os.environ["TMDB_API_KEY"]
-# Setup tmdb as its own session, caching requests
-# (we only want to cache tmdb, not elasticsearch)
-# Get your TMDB API key from
-#  https://www.themoviedb.org/documentation/api
-# then in shell do export TMDB_API_KEY=<Your Key>
 tmdb_api = requests.Session()
 tmdb_api.params={'api_key': tmdb_api_key}
 
