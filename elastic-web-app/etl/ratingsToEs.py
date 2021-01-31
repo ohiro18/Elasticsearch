@@ -2,7 +2,6 @@ from ratings import userBaskets
 
 def esBaskets(mlTMDB,mlRatings):
     """ Movies a given user likes """
-    # Assumes sorted by user id
     for userId, basketDescription in userBaskets(mlTMDB,mlRatings):
         yield {"_index": "movielens", "_type": "user",
                 "_id": userId, "_source": basketDescription}
