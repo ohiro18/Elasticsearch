@@ -18,6 +18,8 @@ def rehashToMovielens(tmdbFile='tmdb.json', outFile='ml_tmdb.json'):
     of = open(outFile, 'w')
     of.write(json.dumps(mlDict))
 
+def reflash():
+    return 0
 
 if __name__ == "__main__":
     from sys import argv
