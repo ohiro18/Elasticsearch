@@ -13,6 +13,7 @@ app.get('/', (req, res) => {
 
 const socketio = require('socket.io')
 const io = socketio.listen(server)
+//const e2e = socketio.listen(server.idle)
 
 io.on('connection', (socket) => {
   console.log('Connect user:', socket.client.id)
@@ -22,3 +23,4 @@ io.on('connection', (socket) => {
     io.emit('chat-msg', msg)
   })
 })
+
