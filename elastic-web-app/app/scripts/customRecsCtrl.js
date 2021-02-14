@@ -38,11 +38,9 @@ angular.module('recsApp')
       customRecs.recs.run();
     };
 
-
-    customRecs.recs.run = function() {
+/*    customRecs.recs.run = function() {
       recsSvc.recommend(customRecs.recs, customRecs.recs.config);
     };
-
-
+*/
 
   });
