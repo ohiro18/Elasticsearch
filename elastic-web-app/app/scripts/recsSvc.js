@@ -89,14 +89,14 @@ function recsSvc(esClient, $q, $http, graphUtils) {
     });
 
     // include popular years
-    var cutoff = 0;
+/*    var cutoff = 0;
     var likedHalfDecades = [];
     angular.forEach(allYears, function(cnt, year) {
       if (cnt > cutoff) {
         likedHalfDecades.push(year);
       }
     });
-
+*/
     // include overview text
     likeGenreqStr = likedGenres.join(' OR ');
     likeYearQStr = likedHalfDecades.join(' OR ');
@@ -170,9 +170,6 @@ function recsSvc(esClient, $q, $http, graphUtils) {
       var allItems = resp.vertices;
       var usersItems = graphUtils.parse(resp.vertices, resp.connections);
 
-      // sort by depth so 0 depth first, helps
-      // organize the graph
-
       relatedItemIds = [];
       angular.forEach(allItems, function(ItemVertex) {
         var ItemId = ItemVertex.term;
@@ -212,9 +209,6 @@ function recsSvc(esClient, $q, $http, graphUtils) {
       }
 
       );
-
-      // Items of depth 1 are significant to the Item at depth 0 it's connected to
-
       console.log(resp);
     });
 
