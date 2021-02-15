@@ -1,0 +1,9 @@
+version: "4.2"
+
+services:
+  superset:
+    build:
+      context: ./build/superset
+    ports:
+      - "3000:3000"
+      
