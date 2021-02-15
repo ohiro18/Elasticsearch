@@ -1,0 +1,27 @@
+PyAthenaJDBC>1.0.9
+PyAthena>1.2.0
+sqlalchemy-redshift
+sqlalchemy-drill
+pydruid
+pyhive
+impala
+kylinpy
+pinotdb
+sqlalchemy-solr
+pymssql
+pybigquery
+sqlalchemy-clickhouse
+cockroachdb
+sqlalchemy_dremio
+elasticsearch-dbapi
+sqlalchemy-exasol
+gsheetsdb
+psycopg2
+ibm_db_sa
+mysqlclient
+cx_Oracle
+sqlalchemy-hana
+snowflake-sqlalchemy
+sqlalchemy-teradata
+sqlalchemy-vertica-python
+# https://superset.apache.org/docs/databases/installing-database-drivers
