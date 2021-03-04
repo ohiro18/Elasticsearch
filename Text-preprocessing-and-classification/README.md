@@ -12,3 +12,7 @@ Domain-specific language
 Low-resource languages
 Lack of research and development
 
+
+## ToDo
+* READMEを整える
+* リファクタリング
